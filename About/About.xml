@@ -7,19 +7,19 @@
     <supportedVersions>
         <li>1.6</li>
     </supportedVersions>
-    <modVersion IgnoreIfNoMatchingField="True">1.2.1</modVersion>
+    <modVersion IgnoreIfNoMatchingField="True">1.3.0</modVersion>
     <description>This mod adds LWOP-style items WITHOUT Combat Extended.
 
-Items in this mod are inspired by LWOP Package (https://steamcommunity.com/sharedfiles/filedetails/?id=2012717312).
+Items inspired by LWOP Package (https://steamcommunity.com/sharedfiles/filedetails/?id=2012717312).
 
 Current features:
 - Joywire: Permanent mood boost implant
-- HyperVitality Chip: Neural implant that reduces sleep need to 2 hours per day
-- Flying Tigers Super Rifle: High-capacity assault rifle (vanilla bullet)
+- HyperVitality Chip: Reduces sleep need to ~2 hours per day
+- Flying Tigers Super Rifle: High-capacity assault rifle (vanilla projectile)
 - Flying Tigers Elite Helmet: Elite head protection
 - Flying Tigers Elite Armor: Elite combat armor
 
-This version does NOT require Combat Extended. Use this if you play without CE.
+No dependencies required. Works with or without other mods.
 
-Load Order: This mod works on its own. Place it after other core mods in your mod list.</description>
+Note: If you use Combat Extended, use the main "Super weapons and armors" mod instead.</description>
 </ModMetaData>
