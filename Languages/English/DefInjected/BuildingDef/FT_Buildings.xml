@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <FT_VoidWoodGenerator.label>Void Wood-Fired Generator</FT_VoidWoodGenerator.label>
+  <FT_VoidWoodGenerator.description>An experimental generator that extracts energy from void wood. Produces massive power output.</FT_VoidWoodGenerator.description>
+</LanguageData>

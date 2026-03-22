@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Joywire -->
+  <MyMod_Joywire.label>HappyChip</MyMod_Joywire.label>
+  <MyMod_Joywire.description>Implant permanent happiness stimulation in the brain.</MyMod_Joywire.description>
+  <MyMod_InstallJoywire.label>Install HappyChip</MyMod_InstallJoywire.label>
+  
+  <!-- Super Rifle -->
+  <MyMod_SuperRifle.label>Flying Tigers Super Rifle</MyMod_SuperRifle.label>
+  <MyMod_SuperRifle.description>An advanced assault rifle chambered in 7.62x39mm Soviet, featuring high accuracy and reliability.</MyMod_SuperRifle.description>
+  
+  <!-- Super Barrett -->
+  <AmmoSet_SuperBarrett.label>Super Barrett</AmmoSet_SuperBarrett.label>
+  <Ammo_SuperBarrett.label>Super Barrett Cartridge</Ammo_SuperBarrett.label>
+  <Ammo_SuperBarrett.description>Super Barrett ammunition - extremely powerful anti-materiel round.</Ammo_SuperBarrett.description>
+  <Bullet_SuperBarrett.label>Super Barrett Bullet</Bullet_SuperBarrett.label>
+  <FT_SuperRifle.label>Flying Tigers Super Rifle</FT_SuperRifle.label>
+  <FT_SuperRifle.description>An experimental directed energy weapon that fires supercharged plasma bolts. Infinite ammo capacity.</FT_SuperRifle.description>

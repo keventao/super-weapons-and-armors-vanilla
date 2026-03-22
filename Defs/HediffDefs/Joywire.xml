@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- ==================== Joywire - Hediff ==================== -->
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>MyMod_Joywire</defName>
+        <label>Joywire</label>
+        <labelNoun>Joywire</labelNoun>
+        <description>LWOP Joywire</description>
+        <descriptionHyperlinks><ThingDef>MyMod_Joywire</ThingDef></descriptionHyperlinks>
+        <stages>
+            <li>
+                <partEfficiencyOffset>99.99</partEfficiencyOffset>
+            </li>
+        </stages>
+        <spawnThingOnRemoved>MyMod_Joywire</spawnThingOnRemoved>
+    </HediffDef>
+
+    <!-- ==================== Joywire - Item ==================== -->
+    <ThingDef ParentName="BodyPartBase">
+        <defName>MyMod_Joywire</defName>
+        <label>Joywire</label>
+        <description>Implant happiness in the brain.</description>
+        <graphicData>
+            <texPath>Things/Item/Health/HealthItem</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>500</MarketValue>
+            <WorkToMake>500</WorkToMake>
+        </statBases>
+        <thingCategories>
+            <li>BodyParts</li>
+        </thingCategories>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+        <costList>
+            <Steel>1</Steel>
+        </costList>
+    <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>0</Crafting>
+            </skillRequirements>
+            <recipeUsers>
+                <li>FabricationBench</li>
+                <li>TableMachining</li>
+                <li>CraftingSpot</li>
+            </recipeUsers>
+        </recipeMaker>
+    </ThingDef>
+
+    <!-- ==================== Install Recipe ==================== -->
+    <RecipeDef>
+        <defName>MyMod_InstallJoywire</defName>
+        <label>install Joywire</label>
+        <workerClass>Recipe_InstallImplant</workerClass>
+        <workAmount>500</workAmount>
+        <skillRequirements>
+            <Medicine>0</Medicine>
+        </skillRequirements>
+        <recipeUsers>
+            <li>Human</li>
+        </recipeUsers>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MyMod_Joywire</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>MyMod_Joywire</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>MyMod_Joywire</addsHediff>
+    </RecipeDef>
+
+    <!-- ==================== Joywire Thought ==================== -->
+    <ThoughtDef>
+        <defName>MyMod_Joywire</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>MyMod_Joywire</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>Joywire</label>
+                <description>Feel so damn good!</description>
+                <baseMoodEffect>300</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

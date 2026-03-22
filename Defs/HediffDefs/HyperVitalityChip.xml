@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- ==================== HyperVitality Chip - Hediff ==================== -->
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>MyMod_HyperVitalityChip</defName>
+        <label>HyperVitality Chip</label>
+        <labelNoun>a HyperVitality Chip</labelNoun>
+        <description>A neural implant that eliminates the need for sleep. Users will remain energized 24/7.</description>
+        <descriptionHyperlinks><ThingDef>MyMod_HyperVitalityChip</ThingDef></descriptionHyperlinks>
+        <stages>
+            <li>
+                <restFallFactorOffset>-0.75</restFallFactorOffset>
+            </li>
+        </stages>
+        <spawnThingOnRemoved>MyMod_HyperVitalityChip</spawnThingOnRemoved>
+    </HediffDef>
+
+    <!-- ==================== HyperVitality Chip - Item ==================== -->
+    <ThingDef ParentName="BodyPartBase">
+        <defName>MyMod_HyperVitalityChip</defName>
+        <label>HyperVitality Chip</label>
+        <description>A neural implant that eliminates the need for sleep. Users will remain energized 24/7.</description>
+        <graphicData>
+            <texPath>Things/Item/Health/HealthItem</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>500</MarketValue>
+            <WorkToMake>500</WorkToMake>
+        </statBases>
+        <thingCategories>
+            <li>BodyParts</li>
+        </thingCategories>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+        <costList>
+            <Steel>1</Steel>
+        </costList>
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>0</Crafting>
+            </skillRequirements>
+            <recipeUsers>
+                <li>FabricationBench</li>
+                <li>TableMachining</li>
+                <li>CraftingSpot</li>
+            </recipeUsers>
+        </recipeMaker>
+    </ThingDef>
+
+    <!-- ==================== Install Recipe ==================== -->
+    <RecipeDef>
+        <defName>MyMod_InstallHyperVitalityChip</defName>
+        <label>install HyperVitality Chip</label>
+        <workerClass>Recipe_InstallImplant</workerClass>
+        <workAmount>500</workAmount>
+        <skillRequirements>
+            <Medicine>0</Medicine>
+        </skillRequirements>
+        <recipeUsers>
+            <li>Human</li>
+        </recipeUsers>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MyMod_HyperVitalityChip</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>MyMod_HyperVitalityChip</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>MyMod_HyperVitalityChip</addsHediff>
+    </RecipeDef>
+</Defs>

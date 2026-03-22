@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ==================== 三级护甲 (Tier 3 Armor) - 原生版 ==================== -->
+  <!-- 代码结构对照 LWOP lwApparelArmorPowerBase，数值保持 CE 版原值 -->
+
+  <ThingDef ParentName="ApparelBase">
+    <defName>MyMod_Tier3Armor_Vanilla</defName>
+    <label>Flying Tigers Elite Armor (Vanilla)</label>
+    <description>Elite combat armor from the Flying Tigers unit. Provides exceptional protection against bullets, blunt attacks, and electrical damage. Features superior mobility and environmental resistance. (Vanilla version)</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/PowerArmor/PowerArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Spacer</techLevel>
+    <generateCommonality>0</generateCommonality>
+
+    <!-- 数值保持 CE 版原值 -->
+    <statBases>
+      <WorkToMake>2000</WorkToMake>
+      <MaxHitPoints>4000</MaxHitPoints>
+      <Mass>1</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>200</ArmorRating_Sharp>
+      <ArmorRating_Blunt>200</ArmorRating_Blunt>
+      <ArmorRating_Heat>200</ArmorRating_Heat>
+      <Insulation_Cold>200</Insulation_Cold>
+      <Insulation_Heat>200</Insulation_Heat>
+      <EquipDelay>0</EquipDelay>
+      <JumpRange>200</JumpRange>
+      <PackRadius>4.9</PackRadius>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>1</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+      <RangedWeapon_Cooldown>0</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+
+    <!-- 数值保持 CE 版原值 -->
+    <equippedStatOffsets>
+      <CarryingCapacity>40</CarryingCapacity>
+      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">40</VacuumResistance>
+      <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">40</ToxicEnvironmentResistance>
+      <MechControlGroups MayRequire="Ludeon.RimWorld.Biotech">1</MechControlGroups>
+      <MechBandwidth MayRequire="Ludeon.RimWorld.Biotech">40</MechBandwidth>
+      <WorkSpeedGlobalOffsetMech MayRequire="Ludeon.RimWorld.Biotech">400</WorkSpeedGlobalOffsetMech>
+      <MechRemoteRepairDistance MayRequire="Ludeon.RimWorld.Biotech">400</MechRemoteRepairDistance>
+      <MechFormingSpeed MayRequire="Ludeon.RimWorld.Biotech">400</MechFormingSpeed>
+      <MechRemoteShieldDistance MayRequire="Ludeon.RimWorld.Biotech">400</MechRemoteShieldDistance>
+      <MechRemoteShieldEnergy MayRequire="Ludeon.RimWorld.Biotech">400</MechRemoteShieldEnergy>
+      <MechRepairSpeed MayRequire="Ludeon.RimWorld.Biotech">400</MechRepairSpeed>
+      <PsychicEntropyRecoveryRate MayRequire="Ludeon.RimWorld.Royalty">400</PsychicEntropyRecoveryRate>
+      <MeditationFocusGain MayRequire="Ludeon.RimWorld.Royalty">400</MeditationFocusGain>
+      <PsychicEntropyGain MayRequire="Ludeon.RimWorld.Royalty">0.0001</PsychicEntropyGain>
+      <PsychicEntropyMax MayRequire="Ludeon.RimWorld.Royalty">400</PsychicEntropyMax>
+      <MoveSpeed>1200</MoveSpeed>
+      <WorkSpeedGlobal>20</WorkSpeedGlobal>
+    </equippedStatOffsets>
+
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <tradeTags>
+      <li>LWHiTechArmor</li>
+    </tradeTags>
+    <costList>
+      <Steel>1</Steel>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/PowerArmor/PowerArmor</wornGraphicPath>
+      <tags>
+        <li>IndustrialMilitary</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(0.33,0.33,0.33,1)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.65,0.65,0.65,1)</only>
+        </li>
+        <li>
+          <weight>6</weight>
+          <min>(0.3,0.3,0.3,1)</min>
+          <max>(0.5,0.5,0.5,1)</max>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.9,0.9,0.9,1)</only>
+        </li>
+      </options>
+    </colorGenerator>
+
+    <thingSetMakerTags>
+      <li>RewardStandardHighFreq</li>
+    </thingSetMakerTags>
+
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>1</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+        <li>TableMachining</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+</Defs>
