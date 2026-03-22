@@ -22,9 +22,9 @@
       <MaxHitPoints>2500</MaxHitPoints>
       <Mass>1</Mass>
       <Flammability>0</Flammability>
-      <ArmorRating_Sharp>200</ArmorRating_Sharp>
-      <ArmorRating_Blunt>200</ArmorRating_Blunt>
-      <ArmorRating_Heat>200</ArmorRating_Heat>
+      <ArmorRating_Sharp>999</ArmorRating_Sharp>
+      <ArmorRating_Blunt>999</ArmorRating_Blunt>
+      <ArmorRating_Heat>999</ArmorRating_Heat>
       <Insulation_Cold>200</Insulation_Cold>
       <Insulation_Heat>200</Insulation_Heat>
       <EquipDelay>0</EquipDelay>
