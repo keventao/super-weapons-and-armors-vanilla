@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- ==================== Pollution Pump Pro Max - ThingDef ==================== -->
+    <ThingDef>
+        <defName>MyMod_PollutionPump</defName>
+        <label>Pollution Pump Pro Max</label>
+        <description>LWOP Pollution Pump Pro Max — Sucks up all pollution from the entire map instantly. Biotech DLC required.</description>
+        <tickerType>Normal</tickerType>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <thingCategories>
+            <li>BuildingsMisc</li>
+        </thingCategories>
+        <graphicData>
+            <texPath>Things/Building/Production/PollutionPump</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,1)</drawSize>
+        </graphicData>
+        <uiIconScale>0.85</uiIconScale>
+        <rotatable>false</rotatable>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>10</fillPercent>
+        <building>
+            <ai_chillDestination>false</ai_chillDestination>
+            <buildingTags>
+                <li>Biotech</li>
+            </buildingTags>
+        </building>
+        <designationCategory>Biotech</designationCategory>
+        <statBases>
+            <MaxHitPoints>2000</MaxHitPoints>
+            <WorkToBuild>40</WorkToBuild>
+            <Mass>1</Mass>
+            <Flammability>0</Flammability>
+        </statBases>
+        <size>(1,1)</size>
+        <costList>
+            <Steel>1</Steel>
+        </costList>
+        <comps>
+            <li Class="CompProperties_PollutionPump">
+                <radius>999</radius>
+                <pumpEffecterDef>PollutionPumped</pumpEffecterDef>
+                <pumpsPerWastepack>0</pumpsPerWastepack>
+                <intervalTicks>1</intervalTicks>
+            </li>
+            <li Class="CompProperties_Flickable"/>
+        </comps>
+        <placeWorkers>
+            <li>PlaceWorker_PollutionPump</li>
+        </placeWorkers>
+        <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    </ThingDef>
+
+</Defs>
