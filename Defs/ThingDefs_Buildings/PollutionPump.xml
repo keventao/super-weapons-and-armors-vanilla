@@ -38,7 +38,7 @@
     </costList>
     <comps>
       <li Class="CompProperties_PollutionPump">
-        <radius>999</radius>
+        <radius>180</radius>
         <pumpEffecterDef>PollutionPumped</pumpEffecterDef>
         <pumpsPerWastepack>0</pumpsPerWastepack>
         <intervalTicks>1</intervalTicks>
