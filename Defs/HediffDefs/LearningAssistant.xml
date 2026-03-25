@@ -12,9 +12,9 @@
             <li>
                 <!-- Core Learning Bonuses -->
                 <statOffsets>
-                    <GlobalLearningFactor>9.99</GlobalLearningFactor>
+                    <GlobalLearningFactor>50</GlobalLearningFactor>
                     <ImmunityGainSpeed>9.99</ImmunityGainSpeed>
-                    <ResearchSpeed>9.99</ResearchSpeed>
+                    <ResearchSpeed>50</ResearchSpeed>
                     <CookSpeed>9.99</CookSpeed>
                     <ShootingAccuracyPawn>5</ShootingAccuracyPawn>
                 </statOffsets>
