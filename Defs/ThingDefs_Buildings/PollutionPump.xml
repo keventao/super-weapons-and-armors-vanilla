@@ -4,6 +4,7 @@
     <!-- ==================== Pollution Pump Pro Max - ThingDef ==================== -->
     <ThingDef>
         <defName>MyMod_PollutionPump</defName>
+        <thingClass>ThingWithComps</thingClass>
         <label>Pollution Pump Pro Max</label>
         <description>LWOP Pollution Pump Pro Max — Sucks up all pollution from the entire map instantly. Biotech DLC required.</description>
         <tickerType>Normal</tickerType>
