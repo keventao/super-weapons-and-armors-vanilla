@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- ==================== Learning Assistant - Hediff ==================== -->
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>MyMod_LearningAssistant</defName>
+        <label>Learning Assistant Chip</label>
+        <labelNoun>a Learning Assistant Chip</labelNoun>
+        <description>A neural implant that dramatically boosts learning speed, research efficiency, immunity response, and combat performance. Harvested from LWOP's genius chip technology.</description>
+        <descriptionHyperlinks><ThingDef>MyMod_LearningAssistant</ThingDef></descriptionHyperlinks>
+        <stages>
+            <li>
+                <!-- Core Learning Bonuses -->
+                <statOffsets>
+                    <GlobalLearningFactor>9.99</GlobalLearningFactor>
+                    <ImmunityGainSpeed>9.99</ImmunityGainSpeed>
+                    <ResearchSpeed>9.99</ResearchSpeed>
+                    <CookSpeed>9.99</CookSpeed>
+                    <ShootingAccuracyPawn>5</ShootingAccuracyPawn>
+                </statOffsets>
+                <!-- Survivability -->
+                <naturalHealingFactor>2</naturalHealingFactor>
+            </li>
+        </stages>
+        <spawnThingOnRemoved>MyMod_LearningAssistant</spawnThingOnRemoved>
+    </HediffDef>
+
+    <!-- ==================== Learning Assistant - Item ==================== -->
+    <ThingDef ParentName="BodyPartBase">
+        <defName>MyMod_LearningAssistant</defName>
+        <label>Learning Assistant Chip</label>
+        <description>A neural implant that gives the user an unprecedented learning boost. Provides PhD-level cognitive enhancement across all skill domains.</description>
+        <graphicData>
+            <texPath>Things/Item/Health/HealthItem</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>500</MarketValue>
+            <WorkToMake>500</WorkToMake>
+        </statBases>
+        <thingCategories>
+            <li>BodyParts</li>
+        </thingCategories>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+        <costList>
+            <Steel>1</Steel>
+        </costList>
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>0</Crafting>
+            </skillRequirements>
+            <recipeUsers>
+                <li>FabricationBench</li>
+                <li>TableMachining</li>
+                <li>CraftingSpot</li>
+            </recipeUsers>
+        </recipeMaker>
+    </ThingDef>
+
+    <!-- ==================== Install Recipe ==================== -->
+    <RecipeDef>
+        <defName>MyMod_InstallLearningAssistant</defName>
+        <label>install Learning Assistant Chip</label>
+        <workerClass>Recipe_InstallImplant</workerClass>
+        <workAmount>500</workAmount>
+        <skillRequirements>
+            <Medicine>0</Medicine>
+        </skillRequirements>
+        <recipeUsers>
+            <li>Human</li>
+        </recipeUsers>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MyMod_LearningAssistant</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>MyMod_LearningAssistant</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>MyMod_LearningAssistant</addsHediff>
+    </RecipeDef>
+
+</Defs>
