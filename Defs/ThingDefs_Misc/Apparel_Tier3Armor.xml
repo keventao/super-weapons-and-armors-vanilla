@@ -39,7 +39,6 @@
 
     <!-- 数值保持 CE 版原值 -->
     <equippedStatOffsets>
-      <CarryingCapacity>500</CarryingCapacity>
       <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">40</VacuumResistance>
       <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">40</ToxicEnvironmentResistance>
       <MechControlGroups MayRequire="Ludeon.RimWorld.Biotech">1</MechControlGroups>
